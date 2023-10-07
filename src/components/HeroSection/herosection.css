@@ -1,0 +1,19 @@
+.hero-spacing {
+  padding-top: 100px;
+}
+
+.hero {
+  padding: 100px;
+}
+
+.hero-heading {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}

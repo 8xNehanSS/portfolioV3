@@ -1,14 +1,15 @@
 .navbar {
   background-color: black;
+  position: fixed;
   color: rgb(56, 86, 255);
   display: flex;
   justify-content: space-between;
-  height: 100%;
   font-size: 20px;
   font-weight: 600;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 10px;
   align-items: center;
+  width: 100%;
 }
 
 .nav-container {
@@ -23,5 +24,40 @@
   padding: 0;
   margin: 0;
   margin-left: 100px;
-  font-size: 20px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+/* Base styles for the element */
+.nav-link {
+  position: relative; /* Required for pseudo-element positioning */
+  display: inline-block; /* To make sure the underline only spans the text */
+  padding: 5px 0px; /* Adjust the space below the text for the underline */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.nav-link > a {
+  text-decoration: none; /* Remove underlines */
+  color: inherit; /* Inherit text color from parent element */
+}
+
+/* Create the underline using a pseudo-element */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the underline */
+  border-radius: 10px;
+  background-color: transparent; /* Initially transparent */
+  transform: scaleX(0); /* Scale the underline to 0 width initially */
+  transform-origin: center bottom;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Change the underline color and width on hover */
+.nav-link:hover::before {
+  transform: scaleX(1); /* Scale the underline to full width on hover */
+  background-color: #007bff; /* Change the background color on hover */
 }

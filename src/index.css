@@ -26,3 +26,7 @@ body {
 .white {
   color: white;
 }
+
+.blue {
+  color: rgb(56, 86, 255);
+}

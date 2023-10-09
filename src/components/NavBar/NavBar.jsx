@@ -6,6 +6,9 @@ const NavBar = (props) => {
     show: {
       display: "block",
     },
+    setmargin: {
+      marginLeft: "50px",
+    },
   };
   let name;
   {
@@ -33,7 +36,7 @@ const NavBar = (props) => {
       : (navlinks = (
           <div class="dropdown">
             <button class="dropbtn" onClick={handleClick}>
-              <img src="../../assets/images/nav.png" width="50px" />
+              <img src="../../assets/images/nav.png" width="45px" />
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" style={clicked ? styles.show : null}>
@@ -49,7 +52,10 @@ const NavBar = (props) => {
   return (
     <nav id="home">
       <div className="navbar">
-        <p className="nav-heading">
+        <p
+          className="nav-heading"
+          style={props.window < 1150 ? styles.setmargin : null}
+        >
           8x<span className="white">{name}</span>.dev
         </p>
         {navlinks}

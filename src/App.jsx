@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <NavBar window={windowWidth} />
-      <HeroSection />
+      <HeroSection window={windowWidth} />
     </>
   );
 }

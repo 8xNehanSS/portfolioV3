@@ -11,6 +11,8 @@
     "Lucida Sans", Arial, sans-serif;
   font-size: 64px;
   font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 p {

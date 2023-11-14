@@ -1,11 +1,6 @@
 .hero-spacing {
   padding-top: 100px;
 }
-
-.hero {
-  padding: 100px;
-}
-
 .hero-typing {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -14,6 +9,27 @@
   color: rgb(56, 86, 255);
   overflow: hidden;
   white-space: nowrap;
+}
+
+.hero {
+  padding: 30px;
+}
+
+.hero-firstcont {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 250px;
+}
+
+.hero-picimage {
+  width: 200px;
+  border: 3px solid #3856ff;
+}
+
+.hero-text {
+  color: white;
+  max-width: 650px;
 }
 
 p {

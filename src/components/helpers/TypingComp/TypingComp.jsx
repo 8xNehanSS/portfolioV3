@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-const TypingComp = () => {
+const TypingComp = (props) => {
+  let size;
+  let align;
+  if (props.window < 750) {
+    size = "1.5rem";
+    align = "center";
+  } else {
+    size = "2rem";
+    align = "left";
+  }
   const fullTexts = [
     "Full Stack Developer..",
     "Frontend Web Developer..",
@@ -9,6 +18,18 @@ const TypingComp = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prevShowCursor) => !prevShowCursor);
+    }, 500);
+
+    return () => {
+      clearInterval(cursorInterval); // cleanup on unmount
+    };
+  }, []);
 
   useEffect(() => {
     let timer;
@@ -38,7 +59,12 @@ const TypingComp = () => {
     return () => clearInterval(timer); // cleanup on unmount
   }, [currentText, currentTextIndex, isDeleting]);
 
-  return <div style={{ minHeight: "100px" }}>{currentText}</div>;
+  return (
+    <div style={{ minHeight: "80px", fontSize: size, textAlign: align }}>
+      {currentText}
+      <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+    </div>
+  );
 };
 
 export default TypingComp;

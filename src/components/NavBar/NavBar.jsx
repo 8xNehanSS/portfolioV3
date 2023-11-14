@@ -36,7 +36,7 @@ const NavBar = (props) => {
       : (navlinks = (
           <div class="dropdown">
             <button class="dropbtn" onClick={handleClick}>
-              <img src="../../assets/images/nav.png" width="45px" />
+              <img src="../../assets/images/nav.png" width="40px" />
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" style={clicked ? styles.show : null}>

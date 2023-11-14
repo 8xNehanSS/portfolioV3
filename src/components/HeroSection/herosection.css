@@ -6,11 +6,12 @@
   padding: 100px;
 }
 
-.hero-heading {
+.hero-typing {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 600;
+  color: rgb(56, 86, 255);
   overflow: hidden;
   white-space: nowrap;
 }

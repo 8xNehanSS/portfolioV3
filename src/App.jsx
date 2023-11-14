@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import { useEffect, useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,6 +21,7 @@ function App() {
     <>
       <NavBar window={windowWidth} />
       <HeroSection window={windowWidth} />
+      <Footer />
     </>
   );
 }

@@ -38,7 +38,7 @@ const TypingComp = () => {
     return () => clearInterval(timer); // cleanup on unmount
   }, [currentText, currentTextIndex, isDeleting]);
 
-  return <div>{currentText}</div>;
+  return <div style={{ minHeight: "100px" }}>{currentText}</div>;
 };
 
 export default TypingComp;
